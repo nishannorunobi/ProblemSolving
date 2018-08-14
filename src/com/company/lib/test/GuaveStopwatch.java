@@ -10,7 +10,7 @@ public class GuaveStopwatch {
         stopwatch.start();
         Thread.sleep(30000);
         stopwatch.stop();
-        long value = stopwatch.elapsedTime(TimeUnit.SECONDS);
+        long value = stopwatch.elapsedTime(TimeUnit.MICROSECONDS);
         System.out.println(value);
 
     }
