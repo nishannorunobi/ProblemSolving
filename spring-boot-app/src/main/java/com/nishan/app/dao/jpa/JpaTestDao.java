@@ -15,6 +15,10 @@ public class JpaTestDao<T> {
     }
 
     public T get(Long id,Class<T> classtype){
-        return entityManager.find(classtype,id);
+        return entityManager.find(classtype,id.intValue());
+    }
+
+    public T edit(T t){
+        return entityManager.merge(t);
     }
 }
